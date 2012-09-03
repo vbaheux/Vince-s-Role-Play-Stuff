@@ -1,0 +1,23 @@
+[
+{
+  "modid": "RolePlayMod",
+  "name": "Vince's Role Play Stuff",
+  "description": "New Role Play features, like tracks, new mobs, legendary
+   ores and stuff, and also new crops. A lot of new possibilities with your    
+   Minecraft game ! Have fun :)",
+  "version": "@VERSION@",
+  "mcversion": "1.3.2",
+  "url": "https://github.com/vinceguit/Vince-s-Role-Play-Stuff",
+  "updateUrl": "",
+  "authors": [
+    "Vinceguit"
+  ],
+  "credits": "By Vinceguit, based on ideas from the project AfterKraft by Vinceguit and Juleno",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
