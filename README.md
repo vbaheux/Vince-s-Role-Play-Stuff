@@ -27,8 +27,8 @@
         *Hand Lanterns, which lights when selected in hand, but also when you put it like a torch.
         *New trees, like the orange tree (only in frozen biomes) -> Oranges will give you a 4 heart healing.
    
-        Well, that will be all for the first version of the mod, but there will be updates.
-        Currently I'm developing the mod, so i'll put regular updates on my repo.
+        Well, that will be all for the first version of the mod, but there will be certainly updates.
+        Currently I'm developing the mod, so i'll put regular updates on this repo.
    
         Thanks for reading, 
         Vinceguit.
