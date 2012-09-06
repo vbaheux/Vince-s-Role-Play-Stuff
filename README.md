@@ -6,11 +6,11 @@
         in Minecraft. Some of these features are inspired from Vince's works on the AfterKraft server, which aren't
         published yet.
    
-      -> Things to come in this mod
+      -> List of coming features :
         *Special tracks which increases the player's speed while walking on X and Z axes
-        *New ores, like mythril, copper, silver, amber, and sapphire. (And mayber others)
-        *New mobs : the dragon baby and the bear
-        *New features for the Ender dragon (and the dragon baby) : they will drop dragon scales while they die, but
+        *New ores, like mythril, copper, silver, amber, and sapphire. (And maybe others)
+        *New mobs : Dragons from the basic world and the bear
+        *Features for the dragon : they will drop dragon scales while they die, but
          there will be a 1% chance that they drop a Reliqual Dragon Stone, which can be used for a special chestplate.
         *Swords, pickaxes, axes, spades and hoes made of new ores/materials, for example Mythril, dragon scales, and
          maybe others.
