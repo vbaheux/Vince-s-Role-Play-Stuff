@@ -2,6 +2,7 @@ package vinceguit.roleplay.src;
 
 import java.util.Random;
 
+import vinceguit.roleplay.CommonProxy;
 import vinceguit.roleplay.RolePlayMod;
 import net.minecraft.src.Block;
 import net.minecraft.src.CreativeTabs;
@@ -61,6 +62,11 @@ public class BlockMythrilOre extends Block
 
             this.dropXpOnBlockBreak(par1World, par2, par3, par4, var8);
         }
+    }
+    
+    public String getTextureFile() 
+    {
+    	return CommonProxy.TERRAIN_PNG;
     }
 }
 

@@ -32,7 +32,7 @@ public class OreWorldGenerator implements IWorldGenerator
 		 for (int i = 0; i < 6; i++)
 	        {
 	        	int posX = par3BlockX + par2Random.nextInt(16);
-	        	int posY = par2Random.nextInt(47);
+	        	int posY = par2Random.nextInt(42);
 	        	int posZ = par4BlockZ + par2Random.nextInt(16);
 	        	new WorldGenMinable(RolePlayMod.oreCopperID, 10).generate(par1World, par2Random, posX, posY, posZ);
 	        }

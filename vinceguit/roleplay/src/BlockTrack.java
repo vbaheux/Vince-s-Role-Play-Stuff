@@ -1,5 +1,6 @@
 package vinceguit.roleplay.src;
 
+import vinceguit.roleplay.CommonProxy;
 import net.minecraft.src.AxisAlignedBB;
 import net.minecraft.src.Block;
 import net.minecraft.src.CreativeTabs;
@@ -25,6 +26,11 @@ public class BlockTrack extends Block
     {
         par5Entity.motionX *= 1.5D;
         par5Entity.motionZ *= 1.5D;
+    }
+    
+    public String getTextureFile() 
+    {
+    	return CommonProxy.TERRAIN_PNG;
     }
     
 	{this.setCreativeTab(CreativeTabs.tabBlock);}

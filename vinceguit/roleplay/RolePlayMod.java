@@ -1,25 +1,26 @@
 package vinceguit.roleplay;
 
 import java.util.logging.Level;
+import net.minecraft.src.Block;
+import net.minecraft.src.Item;
+import net.minecraft.src.Material;
 import vinceguit.roleplay.src.BlockMythrilOre;
 import vinceguit.roleplay.src.BlockRolePlayOre;
 import vinceguit.roleplay.src.BlockTrack;
 import vinceguit.roleplay.src.ItemRolePlay;
 import vinceguit.roleplay.src.OreWorldGenerator;
-import net.minecraft.src.Block;
-import net.minecraft.src.Item;
-import net.minecraft.src.Material;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -31,24 +32,22 @@ public class RolePlayMod
 	public static CommonProxy proxy;
 	@Instance
 	public static RolePlayMod instance;
-	public static OreWorldGenerator oreWorldGenerator = new OreWorldGenerator();
 	
-	//Blocks and BlockIDs
+	//Blocks
 	public static Block trackDirt;
 	public static Block trackStone;
 	public static Block oreMythril;
 	public static Block oreCopper;
 	public static Block oreSilver;
 	public static Block oreAmber;
-	
+	//Block IDs
 	public static int trackDirtID;
 	public static int trackStoneID;
 	public static int oreMythrilID;
 	public static int oreCopperID;
 	public static int oreSilverID;
 	public static int oreAmberID;
-	
-	//Items and ItemIDs
+	//Items
 	public static Item mythril;
 	public static Item copper;
 	public static Item silver;
@@ -60,7 +59,7 @@ public class RolePlayMod
 	public static Item dragonPickaxe;
 	public static Item dragonAxe;
 	public static Item dragonHoe;
-	
+	//Item IDs
 	public static int mythrilID;
 	public static int copperID;
 	public static int silverID;
@@ -78,7 +77,8 @@ public class RolePlayMod
 	{
 		Configuration var1Config = new Configuration(par1Event.getSuggestedConfigurationFile());
 	
-		try {
+		try 
+		{
 			var1Config.load();
 			//Blocks
 			trackDirtID = var1Config.getOrCreateBlockIdProperty("Dirt Track", 2800).getInt();
@@ -101,10 +101,14 @@ public class RolePlayMod
 			dragonHoeID = var1Config.getOrCreateBlockIdProperty("Dragon Scale Hoe", 3010).getInt();
 			
 		} 
-		catch(Exception e) {
+		
+		catch(Exception e) 
+		{
 			FMLLog.log(Level.SEVERE, e, "Vince's Role Play Stuff had a problem loading it's configuration file");
 		} 
-		finally {
+		
+		finally 
+		{
 			var1Config.save();
 		}
 	}
@@ -131,7 +135,6 @@ public class RolePlayMod
 		LanguageRegistry.addName(oreCopper, "Copper Ore");
 		LanguageRegistry.addName(oreSilver, "Silver Ore");
 		LanguageRegistry.addName(oreAmber, "Amber Ore");
-		
 		//Items
 		mythril = new ItemRolePlay(mythrilID).setItemName("mythril").setIconIndex(0);
 		copper = new ItemRolePlay(copperID).setItemName("copper").setIconIndex(1);
@@ -141,13 +144,14 @@ public class RolePlayMod
 		LanguageRegistry.addName(copper, "Copper Ore");
 		LanguageRegistry.addName(silver, "Silver Ore");
 		LanguageRegistry.addName(stoneAmber, "Amber Stone");
-		
-		GameRegistry.registerWorldGenerator(oreWorldGenerator);
+		//World Generator
+		GameRegistry.registerWorldGenerator(new OreWorldGenerator());
 	}
 	
 	@PostInit
-	public void PostInit(FMLInitializationEvent par1Event)
+	public void PostInit(FMLPostInitializationEvent par1Event)
 	{
 		
 	}
+	
 }
